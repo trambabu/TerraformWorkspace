@@ -1,0 +1,33 @@
+# -----------------------------
+# Terraform files
+# -----------------------------
+*.tfstate
+*.tfstate.backup
+.terraform/
+*.tfvars        # Only ignore if contains sensitive info
+
+# -----------------------------
+# Logs
+# -----------------------------
+*.log
+
+# -----------------------------
+# Editor / OS files
+# -----------------------------
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# Binary / build files
+# -----------------------------
+*.exe
+# Large binaries tracked via Git LFS
+*.jar filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+
+# -----------------------------
+# Secrets / Keys
+# -----------------------------
+*.pem
