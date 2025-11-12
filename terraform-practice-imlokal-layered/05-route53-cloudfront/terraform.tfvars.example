@@ -1,0 +1,4 @@
+aws_region = "ap-south-1"
+domain_name = "imlokal.in"
+alb_dns_name = "PLACEHOLDER_FROM_COMPUTE_OUTPUT"
+alb_zone_id = "PLACEHOLDER_FROM_COMPUTE_OUTPUT"
