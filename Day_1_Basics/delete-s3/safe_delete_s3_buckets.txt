@@ -1,0 +1,38 @@
+
+Usage of safe_delete_s3_buckets.sh bash file 
+
+1️⃣ Make it executable:
+chmod +x safe_delete_s3_buckets.sh
+2️⃣ Run it:
+./safe_delete_s3_buckets.sh
+3️⃣ When prompted:
+You’ll be asked for each bucket:
+❓ Do you want to delete this bucket? (yes/no):
+Type yes to delete it
+
+Type no to skip it
+
+Any other input automatically skips for safety
+| Feature                 | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| ✅ Safety prompts        | Confirms before every delete                      |
+| 🧹 Full cleanup         | Removes all objects, versions, and delete markers |
+| 🌍 Region-independent   | Works in any AWS region                           |
+| 🚫 Idempotent           | Safe to re-run anytime                            |
+| 💬 User-friendly output | Clear progress and confirmation                   |
+
+1️⃣ To view S3 buckets:
+aws s3api list-buckets --query 'Buckets[].Name' --output text
+2️⃣ To safely delete them with confirmation:
+./safe_delete_s3_buckets.sh
+It will:
+
+Ask before deleting each bucket
+
+Empty it fully (objects, versions, delete markers)
+
+Then delete the bucket itself
+
+Finally show any remaining buckets
+
+✅ No accidental deletions, full control in your hands.

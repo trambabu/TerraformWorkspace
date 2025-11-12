@@ -1,0 +1,16 @@
+How to Run afe_delete_s3_buckets.ps1
+Open PowerShell (as Admin).
+Set-ExecutionPolicy RemoteSigned -Scope Process
+.\safe_delete_s3_buckets.ps1
+It will:
+
+List all S3 buckets
+
+Ask:
+
+Do you want to delete bucket 'your-bucket-name'? (yes/no)
+
+
+Empty & delete selected buckets
+
+Log every action to safe_delete_log.txt
