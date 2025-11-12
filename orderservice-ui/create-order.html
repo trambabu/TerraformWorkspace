@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Create New Order</h1>
+        <form id="createOrderForm">
+            <div class="mb-3">
+                <label for="customerName" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="customerName" required>
+            </div>
+            <div class="mb-3">
+                <label for="product" class="form-label">Product</label>
+                <input type="text" class="form-control" id="product" required>
+            </div>
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" required>
+            </div>
+            <button type="submit" class="btn btn-success">Create Order</button>
+            <a href="index.html" class="btn btn-secondary">Back</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="js/config.js"></script>
+    <script src="js/orderservice.js"></script>
+    <script>
+        document.getElementById("createOrderForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            createOrder();
+        });
+    </script>
+</body>
+</html>
